@@ -1,6 +1,6 @@
 <?php include('server.php') ?> 
 
-
+#This is the comments
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.php';?>
