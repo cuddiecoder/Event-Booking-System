@@ -1,40 +1,60 @@
-<?php include('server.php') ?> 
+<?php 
+// Include the server-side logic or configuration (e.g., database connection, session handling)
+include('server.php'); 
+?>
 
-#This is the comments
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'header.php';?>
+<?php 
+// Include the header file (typically contains meta tags, stylesheets, or navigation)
+include('header.php');
+?>
+
 <body>
 
-<h4>Welcome to Free-Gigs,the Free Concert Website</h4>
+  <!-- Page Title -->
+  <h4>Welcome to Free-Gigs, the Free Concert Website</h4>
 
-<div class="wrapper">
-<header>
-  <h3><a href="index.php"> Home</a></h3>
-</header>
-<section>
-	 <h4>Admin Login</h4>       
-          <div class="form_settings">
-            <form id="login-form" class="form" action="admin.php" method="post">
+  <div class="wrapper">
 
-              <?php include('errors.php'); ?>
+    <header>
+      <!-- Navigation link to homepage -->
+      <h3><a href="index.php">Home</a></h3>
+    </header>
 
-            <p><span>Username</span><br>
-              <input class="contact" type="text" name="username" value="" /></p>
-            <p><span>Password</span><br>
-              <input class="contact" type="password" name="password" id="typepass" value="" /></p>
-    
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="login_admin" value="submit" /></p>
-          </form>
-          </div>       
-      </div>
-    </div>
+    <section>
+      <h4>Admin Login</h4>
 
-</section>
- <footer>
-  <p>Free-Gigs <?php echo date ("Y");  ?></p>
-</footer>
-</div>
+      <div class="form_settings">
+        <!-- Login form for admin users -->
+        <form id="login-form" class="form" action="admin.php" method="post">
 
-</body>
-</html>
+          <?php 
+          // Include any error messages (e.g., failed login, validation errors)
+          include('errors.php'); 
+          ?>
+
+          <!-- Username field -->
+          <p>
+            <span>Username</span><br>
+            <input class="contact" type="text" name="username" value="" />
+          </p>
+
+          <!-- Password field -->
+          <p>
+            <span>Password</span><br>
+            <input class="contact" type="password" name="password" id="typepass" value="" />
+          </p>
+
+          <!-- Submit button -->
+          <p style="padding-top: 15px">
+            <span>&nbsp;</span>
+            <input class="submit" type="submit" name="login_admin" value="Submit" />
+          </p>
+
+        </form>
+      </div>       
+    </section>
+
+    <footer>
+      <!-- Dis
